@@ -52,7 +52,6 @@ export function ProductCtxProvider({ children }) {
         localStorage.removeItem('products');
       } else {
         setProducts([]);
-        alert('An error happened. please check the console');
         console.log(error);
       }
 
@@ -67,18 +66,15 @@ export function ProductCtxProvider({ children }) {
         setCategories(response.data.data);
       })
       .catch((error) => {
-        alert('An error happened. please Check console');
         console.log(error);
       });
   }
   async function fetchProductType() {
-    console.log('i call by get ProductType api');
     await axios('http://localhost:5555/product_type')
       .then((response) => {
         setProductType(response.data.data);
       })
       .catch((error) => {
-        alert('An error happened. please Check console');
         console.log(error);
       });
   }
