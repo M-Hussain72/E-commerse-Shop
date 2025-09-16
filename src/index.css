@@ -1,0 +1,58 @@
+:root {
+  font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  margin-left: 24px;
+  width: 90%;
+  min-width: 500px;
+
+  clip: rect(0, 700px, 650px, 0);
+}
+
+.casual {
+  width: 30%;
+  background-image: url('./assets/actor1.png');
+}
+
+.modal {
+  position: relative;
+  animation: fade-slide-up 0.3s ease-out forwards;
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
