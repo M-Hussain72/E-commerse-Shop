@@ -3,7 +3,7 @@ import HomePage from './pages/homePage';
 import Category from './pages/Category';
 import ProductDetailPage from './pages/ProductDetailPage';
 import Cart from './pages/Cart';
-import Login from './components/login';
+import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Header from './components/header';
 import Footer from './components/Footer';
